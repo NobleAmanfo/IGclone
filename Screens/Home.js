@@ -23,7 +23,7 @@ export const postFooterIcons = [
     imageurl: 'https://icons8.com/icon/72733/bookmark-outline'
   }
 ]
-export default function Home() {
+export default function Home({navigation}) {
 
   return (
     <SafeAreaView style={Styles.rootContainer}>
@@ -35,7 +35,7 @@ export default function Home() {
         </TouchableOpacity>
 
         <View style={Styles.iconsContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate('Camera')}>
             <Image style={Styles.icons} source={{ uri: 'http://img.icons8.com/fluency-systems-regular/60/ffffff/plus-2-math.png' }} />
           </TouchableOpacity>
           <TouchableOpacity>

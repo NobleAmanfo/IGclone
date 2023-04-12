@@ -24,7 +24,6 @@ export default function Routes() {
 
     const Stack = createStackNavigator();
     const Tab = createBottomTabNavigator();
-    const [pLogo, setpLogo] = useState('');
 
 
     // useEffect(() => {
@@ -48,19 +47,20 @@ export default function Routes() {
     //         })
     // }
 
-    // function CameraStack() {
-    //     return (
-    //         <Stack.Navigator>
-    //             <Stack.Screen name="Add" component={Add} />
+    function HomeStack() {
+        return (
+            <Stack.Navigator>
+                <Stack.Screen options={{ headerShown: false }} name="Home" component={Home} />
+                <Stack.Screen options={{ headerShown: false }} name="Camera" component={Camera} />
 
-    //         </Stack.Navigator>
-    //     );
-    // }
+            </Stack.Navigator>
+        );
+    }
 
     const HomeTabs = () => {
         return (
             <Tab.Navigator
-                initialRouteName={Home}
+                initialRouteName={HomeStack}
                 screenOptions={{
                     tabBarInactiveTintColor: 'grey',
                     tabBarActiveTintColor: '#94a274',
@@ -71,7 +71,7 @@ export default function Routes() {
                     },
                 }}
             >
-                <Tab.Screen name='Home' component={Home}
+                <Tab.Screen name='Home' component={HomeStack}
                     options={{
                         headerShown: false,
                         tabBarLabel: '',
@@ -159,7 +159,6 @@ export default function Routes() {
                 <Stack.Screen options={{ headerShown: false }} name="Register" component={Register} />
                 <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
                 <Stack.Screen options={{ headerShown: false }} name="Home" component={HomeTabs} />
-                <Stack.Screen options={{ headerShown: false }} name="Camera" component={Camera} />
 
             </Stack.Navigator>
         </NavigationContainer>
