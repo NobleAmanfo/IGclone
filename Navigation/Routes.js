@@ -50,8 +50,8 @@ export default function Routes() {
     function HomeStack() {
         return (
             <Stack.Navigator>
-                <Stack.Screen options={{ headerShown: false }} name="Home" component={Home} />
-                <Stack.Screen options={{ headerShown: false }} name="Camera" component={Camera} />
+                <Stack.Screen options={{ headerShown: false }} name=" " component={Home} />
+                <Stack.Screen options={{ headerStyle:{backgroundColor: 'black'}, headerTintColor: 'white', headerShadowVisible: false }} name="New Post" component={Camera} />
 
             </Stack.Navigator>
         );
