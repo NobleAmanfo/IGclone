@@ -16,6 +16,7 @@
     "expo": "~47.0.6",
     "expo-status-bar": "~1.4.2",
     "firebase": "^9.14.0",
+    "formik": "^2.2.9",
     "react": "18.1.0",
     "react-native": "0.70.5",
     "react-native-divider": "^1.0.3",
@@ -23,7 +24,8 @@
     "react-native-gesture-handler": "^2.8.0",
     "react-native-ionicons": "^4.6.5",
     "react-redux": "^8.0.5",
-    "redux-thunk": "^2.4.2"
+    "redux-thunk": "^2.4.2",
+    "yup": "^1.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

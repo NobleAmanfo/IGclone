@@ -35,7 +35,7 @@ export default function Home({navigation}) {
         </TouchableOpacity>
 
         <View style={Styles.iconsContainer}>
-          <TouchableOpacity onPress={()=> navigation.navigate('New Post')}>
+          <TouchableOpacity onPress={()=> navigation.navigate('NEW POST')}>
             <Image style={Styles.icons} source={{ uri: 'http://img.icons8.com/fluency-systems-regular/60/ffffff/plus-2-math.png' }} />
           </TouchableOpacity>
           <TouchableOpacity>

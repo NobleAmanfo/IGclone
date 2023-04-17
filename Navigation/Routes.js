@@ -51,7 +51,7 @@ export default function Routes() {
         return (
             <Stack.Navigator>
                 <Stack.Screen options={{ headerShown: false }} name=" " component={Home} />
-                <Stack.Screen options={{ headerStyle:{backgroundColor: 'black'}, headerTintColor: 'white', headerShadowVisible: false }} name="New Post" component={Camera} />
+                <Stack.Screen options={{ headerStyle:{backgroundColor: 'black'}, headerTintColor: 'white', headerShadowVisible: false }} name="NEW POST" component={Camera} />
 
             </Stack.Navigator>
         );
