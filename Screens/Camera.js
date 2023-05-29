@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
+import { View, Text, SafeAreaView, StyleSheet, TextInput, Image } from 'react-native'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 
@@ -24,7 +24,22 @@ export default function Camera() {
         onSubmit={(values) => console.log(values)}
         validationSchema={uploadPostScheme}
         >
-          
+          {({handleBlur, handleChange, handleSubmit, values, errors, isValid}) => (
+            <>
+            <View style = {{flexDirection: 'row', height: '20%'}}>
+              {/* <Image /> */}
+              <Image source ={{uri: PLACEHOLDER}} style = {{width: '40%', borderRadius: 5,}}/>
+
+              
+              <View style ={{alignSelf: 'flex-start', marginLeft: 10, color: 'white' }}><TextInput placeholder = 'Write a Caption' placeholderTextColor={'gray'} multiline={true}/></View>
+            </View>
+            
+            <TextInput placeholder = 'Enter Image Url' placeholderTextColor={'gray'}/>
+
+
+            
+            </>
+          )}
         </Formik>
 
         {/* FormikUploader */}
